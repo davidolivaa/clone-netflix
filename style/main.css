@@ -1,0 +1,105 @@
+:root{ /*variavel em css, se precisar mudar alguma cor so mudar na var*/
+    --vermelho:#E50914;
+    --preta: #141414;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*impede os elementos de ultrapassar a caixa, mesmo  que os elementos interiores aumentem de tamanaho*/
+}
+
+/*elementos base*/
+body{
+    background: var(--preta);
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+}
+
+header .container{
+    display: flex; /*alinha tudo no container*/
+    flex-direction: row; /*ja vem como padrao, nap é necessario colocar*/
+    align-items: center; /*centraliza na linha*/
+    justify-content:space-between; /*separa as duas tags de container, a h2 e a nav, por isso o logo fica de um lado e os links que estavam dentro da nav do outro*/
+}
+
+header .logo{
+    margin-left: 5px;
+    color: var(--vermelho);
+    font-family: 'Arial Black', Times;
+    font-size: 40px;
+}
+
+header nav a{
+    text-decoration: none; /*removeu as linhas embaixo do link*/
+    color: #AAA;
+    margin-right: 10px;
+}
+
+header nav a:hover{
+    color: #fff;
+}
+
+/*filme principal*/
+.filme-principal{
+    font-size: 16px;
+    background: linear-gradient(rgba(0, 0, 0, .50), rgba(0, 0, 0, .50)100%), url('../img/capa-house.jpg'); 
+
+    height: 400px;
+    background-size: cover; /*vai fazer com que a imagem fique do tamanho da caixa em vez do tamanho original*/
+
+    display: flex;
+    flex-direction: column; /*todos os filhos diretos da tag com class filme-principal vai ficar alinhado verticalmente, filhos que nao sao diretos nao obedecem*/
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.filme-principal .descricao {
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.filme-principal .titulo {
+    margin-top: 15%;
+    font-size: 40px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.botao{
+    background-color: rgba(0, 0, 0, .50);
+    border: none;
+    color: white;
+
+    padding: 15px 30px;
+    margin-right: 15px;
+    font-size: 12px;
+
+    cursor: pointer;
+    transition: .4s ease all;
+}
+.botao:hover{
+    background-color: white;
+    color: black;
+}
+
+.botao i{
+    margin-right: 6px;
+}
+
+.container{
+    margin-left: 20px;
+}
+
+.filme-principal .container{
+    width: 70%;
+}
+
+.box-filme{
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+.carrosel-filmes{
+    margin-top: 5px;
+}
